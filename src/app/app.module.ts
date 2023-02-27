@@ -38,7 +38,8 @@ import { LogoutComponent } from './Authification/logout/logout.component';
 import { HomeComponent } from './Dashboard/home/home.component';
 import { AssesmentComponent } from './Dashboard/assesment/assesment.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { DatePipe } from '@angular/common';
+import { PhonePipe } from './phone.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     LogoutComponent,
     HomeComponent,
-    AssesmentComponent
+    AssesmentComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
@@ -66,6 +68,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
+    DatePipe,
 
     MatToolbarModule,
     MatIconModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Authification/login/login.component';
 import { LogoutComponent } from './Authification/logout/logout.component';
+import { RegisterComponent } from './Authification/register/register.component';
 import { MedstockComponent } from './Component/medstock/medstock.component';
 import { ReceptionformComponent } from './Component/receptionform/receptionform.component';
 import { DoctorComponent } from './Dashboard/doctor/doctor.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'update/:id', component:ReceptionformComponent},
+  {path:'updateEmployee/:id', component:RegisterComponent},
   {path:'updateStock/:id', component:MedstockComponent},
   {path:'detail/:id', component:DetailsComponent},
 

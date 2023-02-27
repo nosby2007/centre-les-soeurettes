@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -14,13 +15,17 @@ import { ApiPatientService } from 'src/app/SERVICE/api-patient.service';
   styleUrls: ['./reception.component.css']
 })
 export class ReceptionComponent implements OnInit {
+  today = new Date();
+  jstoday = '';
   dataSource!:  MatTableDataSource<Patient>;
   public patient!: Patient[];
   @ViewChild(MatPaginator) paginator!:MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
-  displayedColumns: string [] = ['id','firstName','lastName','email','phone', 'department','ordre','date','gender','profession','region','cni','action']
+  displayedColumns: string [] = ['id','firstName','lastName','email','phone', /*'department',*/'ordre','date',/*'gender',*/'profession',/*'PaidType',*/'cni','action']
 
-  constructor( private toast:NgToastService, private api:ApiPatientService, private router:Router, private congirm:NgConfirmService){}
+  constructor( private toast:NgToastService, private api:ApiPatientService, private router:Router, private congirm:NgConfirmService){
+    this.jstoday = formatDate(this.today, 'MMM dd, yyyy , hh:mm:ss a', 'en-US');
+  }
   ngOnInit(): void {
    this.getPatient();
   }

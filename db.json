@@ -29,6 +29,21 @@
       "EMContact": "971557730791",
       "cni": 7849873568,
       "id": 2
+    },
+    {
+      "firstName": "MAKOLONGA",
+      "lastName": "Berthe",
+      "email": "berthe@gmail.com",
+      "phone": "650749152",
+      "department": 33,
+      "ordre": 4,
+      "profession": "CPN",
+      "gender": "Female",
+      "region": "ASSURANCE",
+      "date": "2023-02-26T20:00:00.000Z",
+      "EMContact": "5674909348",
+      "cni": 2347508,
+      "id": 3
     }
   ],
   "nurse": [],
@@ -68,5 +83,6 @@
       "id": 3
     }
   ],
-  "pharmacie": []
+  "pharmacie": [],
+  "users": []
 }
