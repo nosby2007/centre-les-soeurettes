@@ -1,0 +1,72 @@
+{
+  "patient": [
+    {
+      "firstName": "Makougang",
+      "lastName": "Yolande",
+      "email": "nosby2007@gmail.com",
+      "phone": "650749152",
+      "department": 29,
+      "ordre": 1,
+      "profession": "CONSULTATION",
+      "gender": "Female",
+      "region": "CASH",
+      "date": "2023-02-25T20:00:00.000Z",
+      "EMContact": "650749152",
+      "cni": 123455,
+      "id": 1
+    },
+    {
+      "firstName": "Jepthe",
+      "lastName": "Nkwanmen",
+      "email": "nosby2007@yahoo.fr",
+      "phone": "0557730791",
+      "department": 34,
+      "ordre": 2,
+      "profession": "RENDEZ-VOUS",
+      "gender": "Male",
+      "region": "ASSURANCE",
+      "date": "2023-02-25T20:00:00.000Z",
+      "EMContact": "971557730791",
+      "cni": 7849873568,
+      "id": 2
+    }
+  ],
+  "nurse": [],
+  "doctor": [],
+  "medicament": [
+    {
+      "nommed": "PARACETAMOL",
+      "dci": "DOLIPRAN",
+      "achat": 2000,
+      "phone": "657554532",
+      "theurapetique": "ANTHIPYRITIQUE",
+      "quantite": 200,
+      "vente": 1000,
+      "date": "2023-02-26T20:00:00.000Z",
+      "id": 1
+    },
+    {
+      "nommed": "PANTOPRAZOL",
+      "dci": "PEPSOLAN",
+      "achat": 36889,
+      "phone": "657809374",
+      "theurapetique": "REFLUX GATRO OEUSOPHAGIEN",
+      "quantite": 30,
+      "vente": 1500,
+      "date": "2023-02-25T20:00:00.000Z",
+      "id": 2
+    },
+    {
+      "nommed": "CEFIXINE",
+      "dci": "CEFOXEN",
+      "achat": 18999,
+      "phone": "65789843",
+      "theurapetique": "CEPHALOSPHORINE",
+      "quantite": 45,
+      "vente": 400,
+      "date": "2023-02-23T20:00:00.000Z",
+      "id": 3
+    }
+  ],
+  "pharmacie": []
+}

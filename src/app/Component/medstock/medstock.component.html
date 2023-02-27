@@ -1,0 +1,74 @@
+<div class="header">
+    <h1>Fiche MEDICAMENT</h1>
+</div>
+
+<fieldset>
+    <h1 class="text-muted mt-2 text-center">AJOUTER UN MEDICAMENT</h1>
+   <div class="registration-form m-3 p-4">
+    <form [formGroup]="registerForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>NOM DU MEDICAMENT</mat-label>
+                    <input formControlName="nommed" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>DCI</mat-label>
+                    <input formControlName="dci" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>CLASS THEURAPETIQUE</mat-label>
+                    <input formControlName="theurapetique" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>QUANTITE</mat-label>
+                    <input type="number" formControlName="quantite" matInput placeholder="entrer le département de consultation">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>TELEPHONE Fournisseur</mat-label>
+                    <input formControlName="phone" matInput placeholder="Placeholder">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Prix d'achat</mat-label>
+                    <input type="number" formControlName="achat" matInput placeholder="ordre">
+                    <mat-icon matSuffix><i class="fa fa-check" aria-hidden="true"></i></mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Prix de vente unitaire</mat-label>
+                    <input type="number" formControlName="vente" matInput placeholder="ordre">
+                    <mat-icon matSuffix><i class="fa fa-check" aria-hidden="true"></i></mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Date d'ajout</mat-label>
+                    <input formControlName="date" matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <button *ngIf="!isUpdateActive" (click)="submit()" mat-raised-button color="accent" class="mt-4">Submit</button>
+        <button *ngIf="isUpdateActive" (click)="update()" mat-raised-button color="accent" class="mt-4">Update</button>
+    </form>
+</div> 
+</fieldset>
+
