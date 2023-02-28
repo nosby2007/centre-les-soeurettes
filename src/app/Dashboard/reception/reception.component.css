@@ -25,6 +25,7 @@
     background-color: red;
     width: 25%;
     justify-content: center;
+    position: center;
  }
  .tab{
     background-color: rgb(4, 111, 205);

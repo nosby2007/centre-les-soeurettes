@@ -1,0 +1,330 @@
+<div class="conatainer-fluid">
+  <table class="table table-responsive-sm">
+    <thead class="table-primary">
+      <tr>
+            <th colspan="3">
+                <h1><mat-icon>assignment</mat-icon> Details du patient</h1>                            
+            </th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="table-fluid table-bordered table-warning align-items-center">
+      <tr>
+        <th>Nom Du Patient</th>
+        <td>{{userDetails.firstName}}</td>
+        <th>Genre:</th>
+        <td> {{userDetails.gender}} </td>
+        <th> Age :</th>
+        <td>{{userDetails.department}} ans</td>
+      </tr>
+      <tr>
+        <th>CNI</th>
+        <td>{{userDetails.cni}}</td>
+        <th>DOCTEUR:</th>
+        <td>{{userDetails.docteur}}</td>
+        <th>MOTIF</th>
+        <td>{{userDetails.profession}}</td>
+      </tr>
+      <tr>
+        <th>Telephone</th>
+        <td>{{userDetails.phone}}</td>
+        <th>Email</th>
+        <td>{{userDetails.email}}</td>
+        <th>Date d'Admission</th>
+        <td>{{userDetails.date | date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <br> <br><br>
+
+  <form [formGroup]="nurseForm" class="form form-responsive">
+    <table class="table table-responsive-sm  align-items-center justify-content-evently table-hover">
+    <thead class="table-primary">
+      <tr>
+            <th colspan="3">
+                <h1><mat-icon>assignment</mat-icon>Consultation infirmière</h1>                            
+            </th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="table table-shadow">
+      <tr>
+        <th class="table-info">Taille:</th>
+        <td><mat-form-field appearance="outline">
+          <input type="number" formControlName="taille" matInput placeholder="Taille">
+        </mat-form-field></td>
+        <th>Couleur Des Yeux:</th>
+        <td> 
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="couleur" >
+              <mat-option  *ngFor="let state of couleurYeux" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <th> Statut Matrimonial :</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="status">
+              <mat-option  *ngFor="let state of statusM" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th class="table-info">POIDS:</th>
+        <td> <mat-form-field appearance="outline">
+            <input type="number" formControlName="poids" matInput placeholder="kg">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Hauter du Cou:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="cou" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>poid de naissance:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="poidN" matInput placeholder="kg">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">IMC</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="imc" matInput placeholder="indice de masse corporelle">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Rythm. Resp:</th>
+        <td><mat-form-field appearance="outline">
+          <mat-select formControlName="rythme">
+            <mat-option  *ngFor="let state of rhytme" [value]="state">{{state}}</mat-option>
+          </mat-select>
+        </mat-form-field></td>
+        <th>circ. Cranienne:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="cranien" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">Température:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="température" matInput placeholder="en °c">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>SPO2:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="saturation" matInput placeholder="saturation oxyg">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Circ. Brachiale:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="brachiale" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">P.Systolique</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="systole" matInput placeholder="systole">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>respiration:</th>
+        <td> <mat-form-field appearance="outline">
+            <input type="number" formControlName="respiration" matInput placeholder="/min">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>circ. Poitrine:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="poitrine" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">P.diatolique</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="dyastole" matInput placeholder="diastole">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Glycémie:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="glycémie" matInput placeholder="en mg/dL">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Circ. Hanche:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="hanche" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">Pouls Btt/min:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="poul" matInput placeholder="btt/min">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>Groupe Sanguin:</th>
+        <td> <mat-form-field appearance="outline">
+          <mat-select formControlName="sanguin">
+            <mat-option  *ngFor="let state of groupeSang" [value]="state">{{state}}</mat-option>
+          </mat-select>
+        </mat-form-field></td>
+        <th>Circ. poignet:</th>
+        <td><mat-form-field appearance="outline">
+            <input type="number" formControlName="poignet" matInput placeholder="en cm">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th class="table-info">Allergies</th>
+        <td> <mat-form-field appearance="outline">
+          <mat-select formControlName="allergie">
+            <mat-option  *ngFor="let state of allergieQ" [value]="state">{{state}}</mat-option>
+          </mat-select>
+        </mat-form-field></td>
+        <th>Habitudes</th>
+        <td><mat-form-field appearance="outline">
+          <textarea matInput formControlName="habitudes" placeholder="habitudes"></textarea>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field></td>
+        <th>type d'allergie</th>
+        <td><mat-form-field appearance="outline">
+            <mat-select formControlName="allergie">
+              <mat-option  *ngFor="let state of allergies" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="description" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+        <th>Degré de sévérité</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="severité">
+              <mat-option  *ngFor="let state of severity" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>Réactions</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="reaction" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+        <th>CONS.TABAC</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="tabac">
+              <mat-option  *ngFor="let state of tabac" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <th>Si OUI COMBIEN</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="cigarettes" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>CONS.ALCOOL</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="tabac">
+              <mat-option  *ngFor="let state of alcool" [value]="state">{{state}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <th>Si OUI COMBIEN bouteilles</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="bouteilles" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+        <th>Histoire medicale</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="histoire" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>details Anciennes chirurgie</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="chirurgie" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+        <th>Medicament en cours</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="medicament" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+        <th>Observations Infirmières</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="observations" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>Notes Infirmières</th>
+        <td>
+          <mat-form-field appearance="outline">
+            <input type="text" formControlName="note" matInput placeholder="">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <th>Echele de Douleur</th>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <mat-radio-group aria-label="Select an option" formControlName="radio">
+          <mat-radio-button value="1"></mat-radio-button>
+          <mat-radio-button value="2"></mat-radio-button>
+          <mat-radio-button value="3"></mat-radio-button>
+          <mat-radio-button value="4"></mat-radio-button>
+          <mat-radio-button value="5"></mat-radio-button>
+          <mat-radio-button value="6"></mat-radio-button>
+          <mat-radio-button value="7"></mat-radio-button>
+          <mat-radio-button value="8"></mat-radio-button>
+          <mat-radio-button value="9"></mat-radio-button>
+          <mat-radio-button value="1O"></mat-radio-button>
+          </mat-radio-group>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <figure>
+          <img src="./assets/download.png" alt="pain scale">
+    </figure>
+
+                    <button mat-icon-button color="accent"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+                    <button (click)="save()" mat-icon-button color="primary"><mat-icon>done_outline</mat-icon>Save</button>
+
+    
+  </form>
+

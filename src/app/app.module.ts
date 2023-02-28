@@ -40,6 +40,7 @@ import { AssesmentComponent } from './Dashboard/assesment/assesment.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DatePipe } from '@angular/common';
 import { PhonePipe } from './phone.pipe';
+import { NurseDetailsComponent } from './Details/nurse-details/nurse-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import { PhonePipe } from './phone.pipe';
     LogoutComponent,
     HomeComponent,
     AssesmentComponent,
-    PhonePipe
+    PhonePipe,
+    NurseDetailsComponent
   ],
   imports: [
     BrowserModule,

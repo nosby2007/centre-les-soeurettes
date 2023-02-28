@@ -31,7 +31,7 @@
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Age</mat-label>
-                    <input type="number" formControlName="department" matInput placeholder="entrer le département de consultation">
+                    <input type="number" formControlName="department" matInput placeholder="age">
                     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
                 </mat-form-field>
             </div>
@@ -95,6 +95,14 @@
                     <mat-label>Type de paiement</mat-label>
                     <mat-select formControlName="region">
                       <mat-option  *ngFor="let state of region" [value]="state">{{state}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-4">
+                <mat-form-field appearance="outline">
+                    <mat-label>Docteur</mat-label>
+                    <mat-select formControlName="docteur">
+                      <mat-option  *ngFor="let state of docteur" [value]="state">{{state}}</mat-option>
                     </mat-select>
                   </mat-form-field>
             </div>

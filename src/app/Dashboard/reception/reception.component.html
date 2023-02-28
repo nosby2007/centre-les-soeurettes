@@ -5,7 +5,7 @@
             <h1>RECEPTION DASHBORD</h1>
         </div>
         <div class=" container col-md-3">
-            <div class="calendar p-20" mat-icon-button>
+            <div class="calendar" mat-icon-button>
 
                 <span class="icone"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                 <div class="date">
@@ -71,6 +71,10 @@
             <ng-container matColumnDef="phone">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Tel</th>
                 <td mat-cell *matCellDef="let row"> {{row.phone}} </td>
+            </ng-container>
+            <ng-container matColumnDef="docteur">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Docteur</th>
+                <td mat-cell *matCellDef="let row"> {{row.docteur}} </td>
             </ng-container>
 
             <!-- age -->

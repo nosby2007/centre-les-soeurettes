@@ -1,18 +1,19 @@
 {
   "patient": [
     {
-      "firstName": "Makougang",
+      "firstName": "makougang",
       "lastName": "Yolande",
       "email": "nosby2007@gmail.com",
-      "phone": "650749152",
+      "phone": "6768759943",
       "department": 29,
-      "ordre": 1,
+      "ordre": 2345,
       "profession": "CONSULTATION",
       "gender": "Female",
       "region": "CASH",
-      "date": "2023-02-25T20:00:00.000Z",
-      "EMContact": "650749152",
-      "cni": 123455,
+      "date": "2023-02-26T20:00:00.000Z",
+      "EMContact": "659447854",
+      "cni": 234567,
+      "docteur": "BERNARD TCHAMI",
       "id": 1
     },
     {
@@ -52,7 +53,7 @@
     {
       "nommed": "PARACETAMOL",
       "dci": "DOLIPRAN",
-      "achat": 2000,
+      "achat": 200,
       "phone": "657554532",
       "theurapetique": "ANTHIPYRITIQUE",
       "quantite": 200,

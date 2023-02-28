@@ -11,6 +11,7 @@ import { NurseComponent } from './Dashboard/nurse/nurse.component';
 import { PharmacieComponent } from './Dashboard/pharmacie/pharmacie.component';
 import { ReceptionComponent } from './Dashboard/reception/reception.component';
 import { TreatmentRoomComponent } from './Dashboard/treatment-room/treatment-room.component';
+import { NurseDetailsComponent } from './Details/nurse-details/nurse-details.component';
 import { DetailsComponent } from './DetailsPatient/details/details.component';
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'updateEmployee/:id', component:RegisterComponent},
   {path:'updateStock/:id', component:MedstockComponent},
   {path:'detail/:id', component:DetailsComponent},
+  {path:'nursedetail/:id', component:NurseDetailsComponent},
 
 ];
 

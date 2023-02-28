@@ -1,0 +1,47 @@
+
+.header{
+    padding: 15px;
+    margin-bottom: 60px;
+    height: 20px;
+  }
+  .calendar{
+    float: right;
+    width: 100%;
+    font-size: 20px;
+    display: flex; margin-left: 100px;
+  }
+  .date{
+    float: right;
+    padding-left: 15px;
+    padding-top: 5px;
+    color: white;
+    font-weight: 200;
+  }
+ .icone{
+    font-size: 40px;
+    color: white;
+ }
+ .container{
+    background-color: red;
+    width: 25%;
+    justify-content: center;
+    position: center;
+ }
+ .tab{
+    background-color: rgb(4, 111, 205);
+    padding: auto;
+    color: white;
+ }
+ .refresh{
+    float: right;
+    display: flex;
+    width: 400px;
+    padding-top: 8px;
+    right: inherit;
+
+ }
+
+.big {
+   color: white;
+   font-weight: bold;
+}
