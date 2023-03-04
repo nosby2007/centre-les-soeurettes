@@ -126,14 +126,21 @@ export class NurseDetailsComponent implements OnInit { public UserID!: number
 
   });
 }
-save(){}
 
   fetchUserDetails(userID:number){
     this.api.getRegisteredPatientId(userID).subscribe(res=>{
       this.userDetails=res;
     })
     
-
   }
+  save(){
+  this.api.postRegistration(this.nurseForm.value).subscribe(res=>{
+    this.toastService.success({detail:"success", summary:"Professionel Ajouté avec success", duration:3000});
+    this.nurseForm.reset();
+    this.router.navigate(['receptionBord'])
+
+    
+  });
+}
 
 }

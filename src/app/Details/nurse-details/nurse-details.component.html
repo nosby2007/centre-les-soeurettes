@@ -1,14 +1,12 @@
-<div class="conatainer-fluid">
+<br>
+<br>
+<div class="container mt-20 pt-7">
+  <div class="row bg-primary d-flex justify-content-between">
+    <h1><mat-icon>assignment</mat-icon>Observation Patient</h1>
+  </div>
   <table class="table table-responsive-sm">
     <thead class="table-primary">
-      <tr>
-            <th colspan="3">
-                <h1><mat-icon>assignment</mat-icon> Details du patient</h1>                            
-            </th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-      </tr>
+
     </thead>
     <tbody class="table-fluid table-bordered table-warning align-items-center">
       <tr>
@@ -38,293 +36,525 @@
     </tbody>
   </table>
 </div>
+<br>
 
 
-  <br> <br><br>
+<form [formGroup]="nurseForm" class="form form-responsive mb-10">
+  <div class="container">
+    <div class="row bg-primary mb-15">
+      <h1><mat-icon>assignment</mat-icon>Liste des Patients</h1>
+    </div> <br> <br>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Taille</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
 
-  <form [formGroup]="nurseForm" class="form form-responsive">
-    <table class="table table-responsive-sm  align-items-center justify-content-evently table-hover">
-    <thead class="table-primary">
-      <tr>
-            <th colspan="3">
-                <h1><mat-icon>assignment</mat-icon>Consultation infirmière</h1>                            
-            </th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody class="table table-shadow">
-      <tr>
-        <th class="table-info">Taille:</th>
-        <td><mat-form-field appearance="outline">
-          <input type="number" formControlName="taille" matInput placeholder="Taille">
-        </mat-form-field></td>
-        <th>Couleur Des Yeux:</th>
-        <td> 
-          <mat-form-field appearance="outline">
-            <mat-select formControlName="couleur" >
-              <mat-option  *ngFor="let state of couleurYeux" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-        <th> Statut Matrimonial :</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <mat-select formControlName="status">
-              <mat-option  *ngFor="let state of statusM" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th class="table-info">POIDS:</th>
-        <td> <mat-form-field appearance="outline">
-            <input type="number" formControlName="poids" matInput placeholder="kg">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Hauter du Cou:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="cou" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>poid de naissance:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="poidN" matInput placeholder="kg">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">IMC</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="imc" matInput placeholder="indice de masse corporelle">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Rythm. Resp:</th>
-        <td><mat-form-field appearance="outline">
-          <mat-select formControlName="rythme">
-            <mat-option  *ngFor="let state of rhytme" [value]="state">{{state}}</mat-option>
-          </mat-select>
-        </mat-form-field></td>
-        <th>circ. Cranienne:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="cranien" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">Température:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="température" matInput placeholder="en °c">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>SPO2:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="saturation" matInput placeholder="saturation oxyg">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Circ. Brachiale:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="brachiale" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">P.Systolique</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="systole" matInput placeholder="systole">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>respiration:</th>
-        <td> <mat-form-field appearance="outline">
-            <input type="number" formControlName="respiration" matInput placeholder="/min">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>circ. Poitrine:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="poitrine" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">P.diatolique</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="dyastole" matInput placeholder="diastole">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Glycémie:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="glycémie" matInput placeholder="en mg/dL">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Circ. Hanche:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="hanche" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">Pouls Btt/min:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="poul" matInput placeholder="btt/min">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>Groupe Sanguin:</th>
-        <td> <mat-form-field appearance="outline">
-          <mat-select formControlName="sanguin">
-            <mat-option  *ngFor="let state of groupeSang" [value]="state">{{state}}</mat-option>
-          </mat-select>
-        </mat-form-field></td>
-        <th>Circ. poignet:</th>
-        <td><mat-form-field appearance="outline">
-            <input type="number" formControlName="poignet" matInput placeholder="en cm">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th class="table-info">Allergies</th>
-        <td> <mat-form-field appearance="outline">
-          <mat-select formControlName="allergie">
-            <mat-option  *ngFor="let state of allergieQ" [value]="state">{{state}}</mat-option>
-          </mat-select>
-        </mat-form-field></td>
-        <th>Habitudes</th>
-        <td><mat-form-field appearance="outline">
-          <textarea matInput formControlName="habitudes" placeholder="habitudes"></textarea>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field></td>
-        <th>type d'allergie</th>
-        <td><mat-form-field appearance="outline">
-            <mat-select formControlName="allergie">
-              <mat-option  *ngFor="let state of allergies" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field></td>
-      </tr>
-      <tr>
-        <th>Description</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="description" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-        <th>Degré de sévérité</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <mat-select formControlName="severité">
-              <mat-option  *ngFor="let state of severity" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th>Réactions</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="reaction" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-        <th>CONS.TABAC</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <mat-select formControlName="tabac">
-              <mat-option  *ngFor="let state of tabac" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-        <th>Si OUI COMBIEN</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="cigarettes" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th>CONS.ALCOOL</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <mat-select formControlName="tabac">
-              <mat-option  *ngFor="let state of alcool" [value]="state">{{state}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </td>
-        <th>Si OUI COMBIEN bouteilles</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="bouteilles" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-        <th>Histoire medicale</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="histoire" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th>details Anciennes chirurgie</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="chirurgie" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-        <th>Medicament en cours</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="medicament" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-        <th>Observations Infirmières</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="observations" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th>Notes Infirmières</th>
-        <td>
-          <mat-form-field appearance="outline">
-            <input type="text" formControlName="note" matInput placeholder="">
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-        </td>
-      </tr>
-      <tr>
-        <th>Echele de Douleur</th>
-      </tr>
-      <tr>
-        <td colspan="4">
-          <mat-radio-group aria-label="Select an option" formControlName="radio">
-          <mat-radio-button value="1"></mat-radio-button>
-          <mat-radio-button value="2"></mat-radio-button>
-          <mat-radio-button value="3"></mat-radio-button>
-          <mat-radio-button value="4"></mat-radio-button>
-          <mat-radio-button value="5"></mat-radio-button>
-          <mat-radio-button value="6"></mat-radio-button>
-          <mat-radio-button value="7"></mat-radio-button>
-          <mat-radio-button value="8"></mat-radio-button>
-          <mat-radio-button value="9"></mat-radio-button>
-          <mat-radio-button value="1O"></mat-radio-button>
-          </mat-radio-group>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <figure>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Conjonctives</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Status Matrimonial</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Poids</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Hauteur du Cou:</span>
+          <input type="number" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Poids nais:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">IMC</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Rythme</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Circ. Crane:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Temp:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">SPO2:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">circ.Scapulaire:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Systole:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">F. resp:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Cir. Poitrine</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Diastole:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Glycemie:</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Circ. Hanche</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Poul</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">G. Sang</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Circ. Brachiale</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Allergies</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Habitudes</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <br>
+
+
+    <div class="row">
+      <div class="col-md-2">
+        <h4>type d'allergies</h4>
+      </div>
+      <div class="col-md-2">
+        Description
+      </div>
+      <div class="col-md-2">
+        Allergie Severité
+      </div>
+      <div class="col-md-2">
+        Réaction allergique
+      </div>
+      <div class="col-md-2">
+        Date
+      </div>
+      <div class="col-md-2">
+        Action
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-small">
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-small">ALcool</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Quantité/jour</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Tabacc</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">Nombre De cigarette</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">HML</span>
+          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">H.Ch</span>
+          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">MEC</span>
+          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">ObsI</span>
+          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">NOTES</span>
+          <textarea class="formControl" id="" cols="140" rows="3" placeholder="plaintes patient"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="Pas de Douleur"></mat-radio-button>
+          <mat-radio-button value="Legère"></mat-radio-button>
+          <mat-radio-button value="Legère"></mat-radio-button>
+          <mat-radio-button value="legère"></mat-radio-button>
+          <mat-radio-button value="Moderée"></mat-radio-button>
+          <mat-radio-button value="Modérée"></mat-radio-button>
+          <mat-radio-button value="sévère"></mat-radio-button>
+          <mat-radio-button value="très Sévère"></mat-radio-button>
+          <mat-radio-button value="très Sévère"></mat-radio-button>
+          <mat-radio-button value="très Sévère"></mat-radio-button>
+          <mat-radio-button value="aigue"></mat-radio-button>
+        </mat-radio-group>
+
+        <figure>
           <img src="./assets/download.png" alt="pain scale">
-    </figure>
+        </figure>
+        <br>
+        <section>
+          <div class="example-label">ACTION</div>
+          <div class="example-button-row">
+            <button mat-raised-button style="background-color:green">ROS</button>
+            <button mat-raised-button style="background-color: rgb(3, 210, 168)">MFS</button>
+            <button mat-raised-button style="background-color:rgb(0, 199, 0)">SIgnes Vitaux Precédent</button>
+            <button mat-raised-button style="background-color:rgb(155, 253, 155)">Save</button>
+            <a mat-raised-button style="background-color:rgba(232, 247, 247, 0.907)">Cancel</a>
+          </div>
+        </section>
 
-                    <button mat-icon-button color="accent"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
-                    <button (click)="save()" mat-icon-button color="primary"><mat-icon>done_outline</mat-icon>Save</button>
+      </div>
+    </div>
+  </div>
+</form>
+<br>
 
-    
-  </form>
+<div class="container mt-10">
+  <div class="row bg-primary d-flex justify-content-between">
+    <h1>Observation Patient</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      Date
+    </div>
+    <div class="col">
+      Time
+    </div>
+    <div class="col">
+      Temp
+    </div>
+    <div class="col">
+      pool
+    </div>
+    <div class="col">
+      Systole
+    </div>
+    <div class="col">
+      Diastole
+    </div>
+    <div class="col">
+      Respiration
+    </div>
+    <div class="col">
+      SPO2
+    </div>
+    <div class="col">
+      N.Conscience
+    </div>
+    <div class="col">
+      Douleur
+    </div>
+    <div class="col">
+      Obs Infirmier
+    </div>
+    <div class="col">
+      Action
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-sm-1">
+      <input style= "max-width: 130%;" type="date" id="" class="formControl">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 135%;" type="time" class="formControl" name="" id="time">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div  class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div  class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" style="max-width: 50%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <input style="max-width: 75%;" type="number" name="" id="">
+    </div>
+    <div class="col-sm-1">
+      <button class="btn btn-primary">ADD</button>
+    </div>
+  </div>
+
+</div>
+<br>
+<div class="container mt-10">
+  <div class="row bg-primary">
+    <H1>List des Observations</H1>
+  </div>
+  <div class="row">
+    <div class="col">
+      Date
+    </div>
+    <div class="col">
+      Time
+    </div>
+    <div class="col">
+      Temp
+    </div>
+    <div class="col">
+      pool
+    </div>
+    <div class="col">
+      Systole
+    </div>
+    <div class="col">
+      Diastole
+    </div>
+    <div class="col">
+      Respiration
+    </div>
+    <div class="col">
+      SPO2
+    </div>
+    <div class="col">
+      N.Conscience
+    </div>
+    <div class="col">
+      Douleur
+    </div>
+    <div class="col">
+      Obs Infirmier
+    </div>
+    <div class="col">
+      Option
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div  class="col-sm-1">
+    </div>
+    <div  class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+
+</div>
