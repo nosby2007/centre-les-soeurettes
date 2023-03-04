@@ -21,7 +21,7 @@ export class ReceptionComponent implements OnInit {
   public patient!: Patient[];
   @ViewChild(MatPaginator) paginator!:MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
-  displayedColumns: string [] = ['id','firstName','lastName','email','phone', /*'department','ordre','date',*//*'gender',*//*'PaidType',*/'cni', 'docteur', 'action']
+  displayedColumns: string [] = ['id','firstName','lastName','email','phone', /*'department','ordre','date','age',*//*'gender','adresse'*//*'PaidType',*/'cni', 'docteur', 'action']
 
   constructor( private toast:NgToastService, private api:ApiPatientService, private router:Router, private congirm:NgConfirmService){
     this.jstoday = formatDate(this.today, 'MMM dd, yyyy , hh:mm:ss a', 'en-US');

@@ -12,4 +12,6 @@ export class Patient{
     EMContact!: string;
     cni!: number;
     docteur!:string;
+    age!:string;
+    adresse!:string;
 }

@@ -19,6 +19,15 @@ export class ReceptionformComponent implements OnInit{
     'LABORATOIRE',
     'VACCINATION',
   ];
+  departement: string[] = [
+    'Medecine Générale',
+    'CPN',
+    'Maternite',
+    'Laboratoire',
+    'Petit Chirurgie',
+    'Pharmacie',
+    'Vaccination',
+  ];
   docteur: string[] = [
     'BERNARD TCHAMI',
     'SYVIE ETOUNDI',
@@ -53,6 +62,8 @@ export class ReceptionformComponent implements OnInit{
       EMContact: [''],
       cni: [''],
       docteur:[''],
+      age:[''],
+      adresse:[''],
     });
    /* this.registerForm.controls[`height`].valueChanges.subscribe(res=>{
       this.calculateBmi(res);
@@ -120,7 +131,9 @@ export class ReceptionformComponent implements OnInit{
       date: user.date,
       EMContact: user.EMContact,
       cni: user.cni,
+      age: user.age,
       docteur:user.docteur,
+      adresse:user.adresse
     })
     
   }
