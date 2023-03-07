@@ -39,7 +39,7 @@ export class PharmacieComponent implements OnInit {
   }
 
   delete(id: number){
-    this.congirm.showConfirm("Vous êtes sur le point de supprimer ce patient", 
+    this.congirm.showConfirm("Vous êtes sur le point de supprimer ce médicament", 
     ()=>{
       this.api.deleteRegister(id).subscribe(res=>{
         this.toast.success({detail:"success", summary:"Supprimé avec Succès", duration:3000})
