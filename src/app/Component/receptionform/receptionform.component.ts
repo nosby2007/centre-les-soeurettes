@@ -53,7 +53,7 @@ export class ReceptionformComponent implements OnInit{
       lastName: [''],
       email: [''],
       phone: [''],
-      department: [''],
+      Department: [''],
       ordre:[''],
       profession: [''],
       gender: [''],
@@ -64,10 +64,11 @@ export class ReceptionformComponent implements OnInit{
       docteur:[''],
       age:[''],
       adresse:[''],
+      typatient:[''],
+      barre:[''],
+      paiement:[''],
     });
-   /* this.registerForm.controls[`height`].valueChanges.subscribe(res=>{
-      this.calculateBmi(res);
-    });*/
+    
     this.ActivatedRoute.params.subscribe(val => {
       this.userIdToUpdate= val['id'];
       this.api.getRegisteredPatientId(this.userIdToUpdate).subscribe(res=>{
@@ -94,29 +95,7 @@ export class ReceptionformComponent implements OnInit{
       this.router.navigate(['receptionBord'])
     });
   }
-
-  /*calculateBmi(heightValue: number){
-    const weight = this.registerForm.value.height;
-    const height = heightValue;
-    const bmi = weight/(height * height);
-    this.registerForm.controls[`bmi`].patchValue(bmi);
-    switch (true) {
-      case bmi < 18.5:
-        this.registerForm.controls[`bmiResult`].patchValue("Underweight");
-        break;
-      case ( bmi >= 18.5 && bmi < 25):
-        this.registerForm.controls[`bmiResult`].patchValue("Normal");
-        break;
-      case bmi >= 25 && bmi <30:
-        this.registerForm.controls[`bmiResult`].patchValue("Overrweight");
-        break;
-    
-      default:
-        this.registerForm.controls[`bmiResult`].patchValue("Obese");
-        break;
-    }
-
-  }*/
+  
   fillFormToUpdate(user:Patient){
     this.registerForm.setValue({
       firstName: user.firstName,
@@ -124,7 +103,7 @@ export class ReceptionformComponent implements OnInit{
       email: user.email,
       phone: user.phone,
       ordre:user.ordre,
-      department: user.department,
+      Department: user.Department,
       profession: user.profession,
       gender: user.gender,
       region: user.region,
@@ -133,7 +112,10 @@ export class ReceptionformComponent implements OnInit{
       cni: user.cni,
       age: user.age,
       docteur:user.docteur,
-      adresse:user.adresse
+      adresse:user.adresse,
+      barre:user.barre,
+      typatient:user.typatient,
+      paiement:user.paiement,
     })
     
   }

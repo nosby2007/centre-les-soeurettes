@@ -12,7 +12,7 @@ export  class Nurse{
     rythme!: number;
     saturation!: number;
     respiration!: number;
-    glycémie!: number;
+    glycemie!: number;
     sanguin!: string;
     habitudes!: string;
     status!: string;
@@ -22,7 +22,7 @@ export  class Nurse{
     poitrine!: number;
     brachiale!: number;
     hanche!: number;
-    allergieQ!: string;
+    allergieq!: string;
     description!: number;
     severité!: number;
     reaction!: number;
@@ -34,4 +34,6 @@ export  class Nurse{
     chirurgie!: number;
     medicament !: number;
     observations!: number;
+    douleur!: string;
+    note!:string;
 }

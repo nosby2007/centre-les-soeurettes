@@ -2,7 +2,7 @@
 <br>
 <div class="container mt-20 pt-7">
   <div class="row bg-primary d-flex justify-content-between">
-    <h1><mat-icon>assignment</mat-icon>Observation Patient</h1>
+    <h1 style="color: white;"><mat-icon>assignment</mat-icon>Information Du Patient</h1>
   </div>
   <table class="table table-responsive-sm">
     <thead class="table-primary">
@@ -10,28 +10,34 @@
     </thead>
     <tbody class="table-fluid table-bordered table-warning align-items-center">
       <tr>
-        <th>Nom Du Patient</th>
+        <th>Nom Du Patient :</th>
         <td>{{userDetails.firstName}}</td>
         <th>Genre:</th>
         <td> {{userDetails.gender}} </td>
         <th> Age :</th>
-        <td>{{userDetails.department}} ans</td>
+        <td>{{userDetails.age}} ans</td>
+        <th>Departement :</th>
+        <td>{{userDetails.Department}}</td>
       </tr>
       <tr>
-        <th>CNI</th>
+        <th>CNI :</th>
         <td>{{userDetails.cni}}</td>
         <th>DOCTEUR:</th>
         <td>{{userDetails.docteur}}</td>
-        <th>MOTIF</th>
+        <th>MOTIF de Visite :</th>
         <td>{{userDetails.profession}}</td>
+        <th>Code Barre :</th>
+        <td>{{userDetails.barre}}</td>
       </tr>
       <tr>
-        <th>Telephone</th>
+        <th>Telephone :</th>
         <td>{{userDetails.phone}}</td>
-        <th>Email</th>
+        <th>Email :</th>
         <td>{{userDetails.email}}</td>
-        <th>Date d'Admission</th>
+        <th>Date d'Admission :</th>
         <td>{{userDetails.date | date}}</td>
+        <th>Methode de paiement :</th>
+        <td>{{userDetails.paiement}}</td>
       </tr>
     </tbody>
   </table>
@@ -42,13 +48,13 @@
 <form [formGroup]="nurseForm" class="form form-responsive mb-10">
   <div class="container">
     <div class="row bg-primary mb-15">
-      <h1><mat-icon>assignment</mat-icon>Liste des Patients</h1>
+      <h1 style="color: white;"><mat-icon>assignment</mat-icon>Liste des Patients</h1>
     </div> <br> <br>
     <div class="row">
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Taille</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="taille" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -56,14 +62,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Conjonctives</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" formControlName="couleur" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Status Matrimonial</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" formControlName="status" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -72,7 +78,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Poids</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="poids" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -80,14 +86,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Hauteur du Cou:</span>
-          <input type="number" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="cou" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Poids nais:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="poidN" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -96,7 +102,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">IMC</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="imc" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -104,14 +110,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Rythme</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" formControlName="rythme" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Circ. Crane:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="cranien" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -120,7 +126,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Temp:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="température" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -128,14 +134,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">SPO2:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number"  formControlName="saturation" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">circ.Scapulaire:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number"  formControlName="scapula" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -144,7 +150,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Systole:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" formControlName="systole" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -152,14 +158,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">F. resp:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="respiration" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Cir. Poitrine</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" class="form-control" formControlName="poitrine" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -168,7 +174,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Diastole:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" class="form-control" formControlName="dyastole" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -176,14 +182,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Glycemie:</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="glycémie" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Circ. Hanche</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" class="form-control" formControlName="hanche" placeholder="en Cm" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -192,7 +198,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Poul</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" class="form-control" formControlName="poul" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -200,14 +206,14 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">G. Sang</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="sanguin" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Circ. Brachiale</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="number" class="form-control" formControlName="brachiale" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -216,7 +222,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Allergies</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="allergies" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -224,7 +230,7 @@
       <div class="col-md-4">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Habitudes</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="habitudes" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
@@ -257,56 +263,67 @@
     <div class="row">
       <div class="col-md-2">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="allergieq" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-2">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="description" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-2">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="severité" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-2">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="text" class="form-control" formControlName="reaction" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default">
         </div>
       </div>
       <div class="col-md-2">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
+          <input type="date" class="form-control" formControlName="date" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-small">
         </div>
       </div>
       <div class="col-md-2">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
-        </div>
+        <li class="nav-item dropdown open">
+          <button class="nav-link dropdown-toggle" style="font-size: xx-large; margin: auto;" aria-hidden="true" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" mat-icon-button color="accent"><i class="fa fa-1x fa-cog"></i></button>
+          <ul class="dropdown-menu">
+            <li><button (click)="submit()" mat-icon-button color="secondary" ><i class="fa fa-floppy-o" aria-hidden="true"></i></button></li>
+            <li><button (click)="edit()" mat-icon-button color="accent"><i class="fa fa-pencil" aria-hidden="true" ></i></button></li>
+            <li><button (click)="delete()" mat-icon-button color="primary"><i class="fa fa-trash" aria-hidden="true" ></i></button></li>
+            <li><button [routerLink]="['/detail']" mat-icon-button color="warn"><i class="fa fa-eye" aria-hidden="true"></i></button></li>
+          </ul>
+        </li>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
         <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-small">ALcool</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <span class="input-group-text"  id="inputGroup-sizing-small">ALcool</span>
+          <select  class="form-select" type="text" formControlName="alcool" aria-label="Default select example">
+            <option value="1">OUI</option>
+            <option value="2">NON</option>
+            <option value="3">PARFOIS</option>
+          </select>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Quantité/jour</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <select class="form-select" type="text" formControlName="bouteilles" aria-label="Default select example">
+            <option value="1">1 VERRE</option>
+            <option value="2">Une BOUTEILLE</option>
+            <option value="3">PLUS</option>
+          </select>
         </div>
       </div>
 
@@ -315,15 +332,21 @@
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Tabacc</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <select class="form-select" type="text" formControlName="tabac" aria-label="Default select example">
+            <option value="1">OUI</option>
+            <option value="2">NON</option>
+            <option value="3">PARFOIS</option>
+          </select>
         </div>
       </div>
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Nombre De cigarette</span>
-          <input type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default">
+          <select class="form-select" formControlName="cigarettes" aria-label="Default select example">
+            <option value="1">1 à 5</option>
+            <option value="2">1 PAQUET</option>
+            <option value="3">PLUS</option>
+          </select>
         </div>
       </div>
     </div>
@@ -332,14 +355,14 @@
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">HML</span>
-          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+          <textarea class="formControl" formControlName="histoire" id="" cols="63" rows="2"></textarea>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">H.Ch</span>
-          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+          <textarea class="formControl" formaControlName="chirurgie" id="" cols="63" rows="2"></textarea>
 
         </div>
       </div>
@@ -348,13 +371,13 @@
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">MEC</span>
-          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+          <textarea class="formControl" formControlName="medicament" id="" cols="63" rows="2"></textarea>
         </div>
       </div>
       <div class="col-md-6">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">ObsI</span>
-          <textarea class="formControl" id="" cols="63" rows="2"></textarea>
+          <textarea class="formControl" formControlName="observations" id="" cols="63" rows="2"></textarea>
         </div>
       </div>
     </div>
@@ -362,13 +385,13 @@
       <div class="col-md-12">
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">NOTES</span>
-          <textarea class="formControl" id="" cols="140" rows="3" placeholder="plaintes patient"></textarea>
+          <textarea class="formControl" formControlName="note" id="" cols="140" rows="3" placeholder="plaintes patient"></textarea>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group aria-label="Select an option" formControlName="douleur">
           <mat-radio-button value="Pas de Douleur"></mat-radio-button>
           <mat-radio-button value="Legère"></mat-radio-button>
           <mat-radio-button value="Legère"></mat-radio-button>
@@ -392,7 +415,7 @@
             <button mat-raised-button style="background-color:green">ROS</button>
             <button mat-raised-button style="background-color: rgb(3, 210, 168)">MFS</button>
             <button mat-raised-button style="background-color:rgb(0, 199, 0)">SIgnes Vitaux Precédent</button>
-            <button mat-raised-button style="background-color:rgb(155, 253, 155)">Save</button>
+            <button (click)="save()" mat-raised-button style="background-color:rgb(155, 253, 155)">Save</button>
             <a mat-raised-button style="background-color:rgba(232, 247, 247, 0.907)">Cancel</a>
           </div>
         </section>
@@ -405,7 +428,7 @@
 
 <div class="container mt-10">
   <div class="row bg-primary d-flex justify-content-between">
-    <h1>Observation Patient</h1>
+    <h1 style="color: white;">Observation Patient</h1>
   </div>
   <div class="row">
     <div class="col">
@@ -489,7 +512,7 @@
 <br>
 <div class="container mt-10">
   <div class="row bg-primary">
-    <H1>List des Observations</H1>
+    <H1 style="color: white;">List des Observations</H1>
   </div>
   <div class="row">
     <div class="col">

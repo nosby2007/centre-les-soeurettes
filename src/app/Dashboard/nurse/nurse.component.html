@@ -38,7 +38,8 @@
 </div>
 
     <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" matSort class="table table-sm table-responsive table-success table-striped ">
+        <div class="container">
+            <table mat-table [dataSource]="dataSource" matSort class="table table-sm table-responsive table-success table-striped ">
 
             <!-- ID Column -->
             <ng-container matColumnDef="id">
@@ -125,7 +126,10 @@
                 <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
             </tr>
         </table>
-
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+        
+
+        
     </div>
    

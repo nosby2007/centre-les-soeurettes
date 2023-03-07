@@ -2,8 +2,8 @@ export class Patient{
     firstName!: string;
     lastName!: string;
     email!: string;
-    department!: string;
-    phone!: string;
+    Department!: string;
+    phone!: number;
     ordre!:number;
     profession!: string;
     gender!: string;
@@ -12,6 +12,9 @@ export class Patient{
     EMContact!: string;
     cni!: number;
     docteur!:string;
-    age!:string;
+    age!:number;
     adresse!:string;
+    typatient!:string;
+    barre!:number;
+    paiement!:string;
 }

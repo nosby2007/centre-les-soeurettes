@@ -1,1 +1,99 @@
-<p>details works!</p>
+
+
+<div class="container mt-20 pt-7">
+    <div class="row bg-primary d-flex justify-content-between">
+      <h1 style="color: white;"><mat-icon>assignment</mat-icon>Information Du Patient</h1>
+    </div>
+    <table class="table table-responsive-sm">
+      <thead class="table-primary">
+  
+      </thead>
+      <tbody class="table-fluid table-bordered table-warning align-items-center">
+        <tr>
+          <th> Nom du Patient :</th>
+          <td>{{userDetails.firstName}}</td>
+          <th>Genre:</th>
+          <td> {{userDetails.gender}} </td>
+          <th> Age :</th>
+          <td>{{userDetails.age}} ans</td>
+          <th>Departement :</th>
+          <td>{{userDetails.Department}}</td>
+        </tr>
+        <tr>
+          <th>CNI :</th>
+          <td>{{userDetails.cni}}</td>
+          <th>DOCTEUR:</th>
+          <td>{{userDetails.docteur}}</td>
+          <th>MOTIF de Visite :</th>
+          <td>{{userDetails.profession}}</td>
+          <th>Code Barre :</th>
+          <td>{{userDetails.barre}}</td>
+        </tr>
+        <tr>
+          <th>Telephone :</th>
+          <td>{{userDetails.phone}}</td>
+          <th>Email :</th>
+          <td>{{userDetails.email}}</td>
+          <th>Date d'Admission :</th>
+          <td>{{userDetails.date | date}}</td>
+          <th>Methode de paiement :</th>
+          <td>{{userDetails.paiement}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<div class="container mt-20 pt-7">
+    <div class="row bg-primary d-flex justify-content-between">
+      <h1 style="color: white;"><mat-icon>assignment</mat-icon>Observation Patient</h1>
+    </div>
+    <table class="table table-responsive-sm">
+        <h3 class="observation">Signes Vitaux</h3>
+      <thead class="table-primary">
+  
+      </thead>
+      <tbody class="table-fluid table-bordered table-warning align-items-center">
+        <tr>
+          <th>Taille :</th>
+          <td>{{nurseDetails.taille}} m</td>
+          <th>poids:</th>
+          <td> {{nurseDetails.poids}} Kg </td>
+          <th> IMC :</th>
+          <td>{{nurseDetails.imc}}</td>
+          <th>Systole :</th>
+          <td>{{nurseDetails.systole}} mmHg</td>
+        </tr>
+        <tr>
+          <th>Diastole :</th>
+          <td>{{nurseDetails.dyastole}} mmHg</td>
+          <th>Poul:</th>
+          <td>{{nurseDetails.poul}} btt/min</td>
+          <th>SPO2 :</th>
+          <td>{{nurseDetails.saturation}} </td>
+          <th>Respiration :</th>
+          <td>{{nurseDetails.respiration}} Resp/min</td>
+        </tr>
+        <tr>
+          <th>Glycémie :</th>
+          <td>{{nurseDetails.glycemie}} dL/kg</td>
+          <th>Allergies:</th>
+          <td>{{nurseDetails.allergieq}}</td>
+          <th>Douleur:</th>
+          <td>{{nurseDetails.douleur}}</td>
+          <th>Reaction Allergique :</th>
+          <td>{{nurseDetails.reaction}}</td>
+        </tr>
+        <h3 class="observation">Observation Inf.</h3>
+        <tr>
+            <th>Plaintes du Patient:</th>
+            <td colspan="1">{{nurseDetails.note}}</td>
+            <th>Observation Infirmère:</th>
+            <td colspan="1">{{nurseDetails.observations}}</td>
+            <th>Histoire Medical:</th>
+            <td>{{nurseDetails.histoire}}</td>
+            <th>Histoire Chirurgicale :</th>
+            <td>{{nurseDetails.chirurgie}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
