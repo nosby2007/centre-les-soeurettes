@@ -1,0 +1,150 @@
+* 
+* ==> Audit <==
+* |---------|-----------------|----------|--------------------------------|---------|---------------------|---------------------|
+| Command |      Args       | Profile  |              User              | Version |     Start Time      |      End Time       |
+|---------|-----------------|----------|--------------------------------|---------|---------------------|---------------------|
+| start   |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 24 Mar 23 15:53 +04 |                     |
+| start   |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 24 Mar 23 17:57 +04 |                     |
+| start   | --driver=docker | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 24 Mar 23 17:59 +04 |                     |
+| delete  |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 24 Mar 23 18:00 +04 | 24 Mar 23 18:00 +04 |
+| start   | --driver=docker | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 24 Mar 23 18:00 +04 |                     |
+| start   |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 27 Mar 23 16:38 +04 |                     |
+| start   |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 27 Mar 23 17:54 +04 |                     |
+| start   |                 | minikube | WIN-I799KIR2D8D\Administrateur | v1.29.0 | 28 Mar 23 11:06 +04 |                     |
+|---------|-----------------|----------|--------------------------------|---------|---------------------|---------------------|
+
+* 
+* ==> Dernier démarrage <==
+* Log file created at: 2023/03/28 11:06:02
+Running on machine: WIN-I799KIR2D8D
+Binary: Built with gc go1.19.5 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0328 11:06:02.154576     992 out.go:296] Setting OutFile to fd 12 ...
+I0328 11:06:02.161955     992 out.go:348] isatty.IsTerminal(12) = true
+I0328 11:06:02.161955     992 out.go:309] Setting ErrFile to fd 16...
+I0328 11:06:02.162512     992 out.go:348] isatty.IsTerminal(16) = true
+I0328 11:06:02.187098     992 out.go:303] Setting JSON to false
+I0328 11:06:02.197139     992 start.go:125] hostinfo: {"hostname":"WIN-I799KIR2D8D","uptime":46714,"bootTime":1679940448,"procs":171,"os":"windows","platform":"Microsoft Windows Server 2019 Standard Evaluation","platformFamily":"Server","platformVersion":"10.0.17763.4131 Build 17763.4131","kernelVersion":"10.0.17763.4131 Build 17763.4131","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"8ab13830-8e36-45cc-9518-213edfa41ecd"}
+W0328 11:06:02.197335     992 start.go:133] gopshost.Virtualization returned error: not implemented yet
+I0328 11:06:02.202982     992 out.go:177] 😄  minikube v1.29.0 sur Microsoft Windows Server 2019 Standard Evaluation 10.0.17763.4131 Build 17763.4131
+I0328 11:06:02.207493     992 notify.go:220] Checking for updates...
+I0328 11:06:02.207540     992 config.go:180] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.26.1
+I0328 11:06:02.219009     992 driver.go:365] Setting default libvirt URI to qemu:///system
+W0328 11:06:02.222334     992 start.go:765] api.Load failed for minikube: filestore "minikube": Docker machine "minikube" does not exist. Use "docker-machine ls" to list machines. Use "docker-machine create" to add a new one.
+I0328 11:06:03.797178     992 out.go:177] ✨  Utilisation du pilote hyperv basé sur le profil existant
+I0328 11:06:03.799328     992 start.go:296] selected driver: hyperv
+I0328 11:06:03.799862     992 start.go:857] validating driver "hyperv" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\Administrateur:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0328 11:06:03.799862     992 start.go:868] status for hyperv: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0328 11:06:03.859225     992 cni.go:84] Creating CNI manager for ""
+I0328 11:06:03.859284     992 cni.go:157] "hyperv" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0328 11:06:03.860013     992 start_flags.go:319] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\Administrateur:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0328 11:06:03.862612     992 iso.go:125] acquiring lock: {Name:mkee2d163a0219e3ea22bb28e57669afeac6a6b5 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0328 11:06:03.864853     992 out.go:177] 👍  Démarrage du noeud de plan de contrôle minikube dans le cluster minikube
+I0328 11:06:03.866801     992 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0328 11:06:03.868593     992 preload.go:148] Found local preload: C:\Users\Administrateur\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4
+I0328 11:06:03.869707     992 cache.go:57] Caching tarball of preloaded images
+I0328 11:06:03.869707     992 preload.go:174] Found C:\Users\Administrateur\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0328 11:06:03.869707     992 cache.go:60] Finished verifying existence of preloaded tar for  v1.26.1 on docker
+I0328 11:06:03.869707     992 profile.go:148] Saving config to C:\Users\Administrateur\.minikube\profiles\minikube\config.json ...
+I0328 11:06:03.871279     992 cache.go:193] Successfully downloaded all kic artifacts
+I0328 11:06:03.874420     992 start.go:364] acquiring machines lock for minikube: {Name:mkf43f4af859bf3af1cf6b23034f45113897de87 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0328 11:06:03.874420     992 start.go:368] acquired machines lock for "minikube" in 0s
+I0328 11:06:03.874420     992 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\Administrateur:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:} &{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0328 11:06:03.874420     992 start.go:125] createHost starting for "" (driver="hyperv")
+I0328 11:06:03.874420     992 out.go:204] 🔥  Création de VM hyperv (CPUs=2, Mémoire=2200MB, Disque=20000MB)...
+I0328 11:06:03.874420     992 start.go:159] libmachine.API.Create for "minikube" (driver="hyperv")
+I0328 11:06:03.874420     992 client.go:168] LocalClient.Create starting
+I0328 11:06:03.879996     992 main.go:141] libmachine: Reading certificate data from C:\Users\Administrateur\.minikube\certs\ca.pem
+I0328 11:06:03.887961     992 main.go:141] libmachine: Decoding PEM data...
+I0328 11:06:03.887961     992 main.go:141] libmachine: Parsing certificate...
+I0328 11:06:03.887961     992 main.go:141] libmachine: Reading certificate data from C:\Users\Administrateur\.minikube\certs\cert.pem
+I0328 11:06:03.903639     992 main.go:141] libmachine: Decoding PEM data...
+I0328 11:06:03.903639     992 main.go:141] libmachine: Parsing certificate...
+I0328 11:06:03.903639     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @(Get-Module -ListAvailable hyper-v).Name | Get-Unique
+I0328 11:06:04.489781     992 main.go:141] libmachine: [stdout =====>] : Hyper-V
+
+I0328 11:06:04.489781     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:04.489781     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(([System.Security.Principal.SecurityIdentifier]::new("S-1-5-32-578")))
+I0328 11:06:04.773938     992 main.go:141] libmachine: [stdout =====>] : False
+
+I0328 11:06:04.773938     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:04.773938     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+I0328 11:06:05.120392     992 main.go:141] libmachine: [stdout =====>] : True
+
+I0328 11:06:05.120392     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:05.120392     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive [Console]::OutputEncoding = [Text.Encoding]::UTF8; ConvertTo-Json @(Hyper-V\Get-VMSwitch|Select Id, Name, SwitchType|Where-Object {($_.SwitchType -eq 'External') -or ($_.Id -eq 'c08cb7b8-9b3c-408e-8e30-5e16a3aeb444')}|Sort-Object -Property SwitchType)
+I0328 11:06:06.175168     992 main.go:141] libmachine: [stdout =====>] : [
+
+]
+
+I0328 11:06:06.175168     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:06.175168     992 client.go:171] LocalClient.Create took 2.3004595s
+I0328 11:06:08.181929     992 start.go:128] duration metric: createHost completed in 4.3069725s
+I0328 11:06:08.181929     992 start.go:83] releasing machines lock for "minikube", held for 4.3069725s
+W0328 11:06:08.182468     992 start.go:689] error starting host: creating host: create: precreate: no External vswitch nor Default Switch found. A valid vswitch must be available for this command to run. Check https://docs.docker.com/machine/drivers/hyper-v/
+I0328 11:06:08.191537     992 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+W0328 11:06:09.170483     992 cli_runner.go:211] docker container inspect minikube --format={{.State.Status}} returned with exit code 1
+I0328 11:06:09.170483     992 delete.go:46] couldn't inspect container "minikube" before deleting: unknown state "minikube": docker container inspect minikube --format={{.State.Status}}: exit status 1
+stdout:
+
+
+stderr:
+error during connect: In the default daemon configuration on Windows, the docker client must be run with elevated privileges to connect.: Get "http://%!F(MISSING)%!F(MISSING).%!F(MISSING)pipe%!F(MISSING)docker_engine/v1.24/containers/minikube/json": open //./pipe/docker_engine: Le fichier spécifié est introuvable.
+I0328 11:06:09.180251     992 cli_runner.go:164] Run: podman container inspect minikube --format={{.State.Status}}
+I0328 11:06:09.180251     992 delete.go:46] couldn't inspect container "minikube" before deleting: unknown state "minikube": podman container inspect minikube --format={{.State.Status}}: exec: "podman": executable file not found in %!P(MISSING)ATH%!
+(MISSING)stdout:
+
+stderr:
+W0328 11:06:09.180251     992 start.go:694] delete host: Docker machine "minikube" does not exist. Use "docker-machine ls" to list machines. Use "docker-machine create" to add a new one.
+W0328 11:06:09.180992     992 out.go:239] 🤦  StartHost a échoué, mais va réessayer : creating host: create: precreate: no External vswitch nor Default Switch found. A valid vswitch must be available for this command to run. Check https://docs.docker.com/machine/drivers/hyper-v/
+I0328 11:06:09.183733     992 start.go:704] Will try again in 5 seconds ...
+I0328 11:06:14.192638     992 start.go:364] acquiring machines lock for minikube: {Name:mkf43f4af859bf3af1cf6b23034f45113897de87 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0328 11:06:14.193391     992 start.go:368] acquired machines lock for "minikube" in 557µs
+I0328 11:06:14.193545     992 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\Administrateur:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:} &{Name: IP: Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0328 11:06:14.194069     992 start.go:125] createHost starting for "" (driver="hyperv")
+I0328 11:06:14.199237     992 out.go:204] 🔥  Création de VM hyperv (CPUs=2, Mémoire=2200MB, Disque=20000MB)...
+I0328 11:06:14.207093     992 start.go:159] libmachine.API.Create for "minikube" (driver="hyperv")
+I0328 11:06:14.207093     992 client.go:168] LocalClient.Create starting
+I0328 11:06:14.208409     992 main.go:141] libmachine: Reading certificate data from C:\Users\Administrateur\.minikube\certs\ca.pem
+I0328 11:06:14.209123     992 main.go:141] libmachine: Decoding PEM data...
+I0328 11:06:14.209123     992 main.go:141] libmachine: Parsing certificate...
+I0328 11:06:14.210333     992 main.go:141] libmachine: Reading certificate data from C:\Users\Administrateur\.minikube\certs\cert.pem
+I0328 11:06:14.210808     992 main.go:141] libmachine: Decoding PEM data...
+I0328 11:06:14.210808     992 main.go:141] libmachine: Parsing certificate...
+I0328 11:06:14.210808     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @(Get-Module -ListAvailable hyper-v).Name | Get-Unique
+I0328 11:06:14.705777     992 main.go:141] libmachine: [stdout =====>] : Hyper-V
+
+I0328 11:06:14.705777     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:14.705777     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(([System.Security.Principal.SecurityIdentifier]::new("S-1-5-32-578")))
+I0328 11:06:15.032206     992 main.go:141] libmachine: [stdout =====>] : False
+
+I0328 11:06:15.032206     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:15.032206     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+I0328 11:06:15.338407     992 main.go:141] libmachine: [stdout =====>] : True
+
+I0328 11:06:15.338407     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:15.338407     992 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive [Console]::OutputEncoding = [Text.Encoding]::UTF8; ConvertTo-Json @(Hyper-V\Get-VMSwitch|Select Id, Name, SwitchType|Where-Object {($_.SwitchType -eq 'External') -or ($_.Id -eq 'c08cb7b8-9b3c-408e-8e30-5e16a3aeb444')}|Sort-Object -Property SwitchType)
+I0328 11:06:16.001352     992 main.go:141] libmachine: [stdout =====>] : [
+
+]
+
+I0328 11:06:16.001352     992 main.go:141] libmachine: [stderr =====>] : 
+I0328 11:06:16.001352     992 client.go:171] LocalClient.Create took 1.7940514s
+I0328 11:06:18.006428     992 start.go:128] duration metric: createHost completed in 3.8119201s
+I0328 11:06:18.006428     992 start.go:83] releasing machines lock for "minikube", held for 3.8125978s
+W0328 11:06:18.007050     992 out.go:239] 😿  Échec du démarrage de hyperv VM. L'exécution de "minikube delete" peut résoudre le problème : creating host: create: precreate: no External vswitch nor Default Switch found. A valid vswitch must be available for this command to run. Check https://docs.docker.com/machine/drivers/hyper-v/
+I0328 11:06:18.011943     992 out.go:177] 
+W0328 11:06:18.013048     992 out.go:239] ❌  Fermeture en raison de GUEST_PROVISION : Failed to start host: creating host: create: precreate: no External vswitch nor Default Switch found. A valid vswitch must be available for this command to run. Check https://docs.docker.com/machine/drivers/hyper-v/
+W0328 11:06:18.013606     992 out.go:239] 
+W0328 11:06:18.018092     992 out.go:239] [31m╭──────────────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m│[0m    😿  Si les conseils ci-dessus ne vous aident pas, veuillez nous en informer :                 [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                                  [31m│[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m│[0m    Veuillez exécuter `minikube logs --file=logs.txt` et attachez logs.txt au problème GitHub.    [31m│[0m
+[31m│[0m                                                                                                  [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I0328 11:06:18.020495     992 out.go:177] 
+
+* 

@@ -8,4 +8,12 @@ import { RegisterServiceService } from 'src/app/SERVICE/register-service.service
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {}
+export class LoginComponent implements OnInit {
+  ngOnInit(): void {
+    
+  }
+  
+  login(){
+    
+  }
+}

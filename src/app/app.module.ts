@@ -41,6 +41,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DatePipe } from '@angular/common';
 import { PhonePipe } from './phone.pipe';
 import { NurseDetailsComponent } from './Details/nurse-details/nurse-details.component';
+import { UserComponent } from './Authification/user/user.component';
+import { environment } from 'src/environments/environment.prod';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +59,8 @@ import { NurseDetailsComponent } from './Details/nurse-details/nurse-details.com
     HomeComponent,
     AssesmentComponent,
     PhonePipe,
-    NurseDetailsComponent
+    NurseDetailsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

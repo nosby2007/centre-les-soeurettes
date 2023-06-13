@@ -80,7 +80,7 @@ export class ReceptionformComponent implements OnInit{
 
   submit(){
     this.api.postRegistration(this.registerForm.value).subscribe(res=>{
-      this.toastService.success({detail:"success", summary:"Professionel Ajouté avec success", duration:3000});
+      this.toastService.success({detail:"success", summary:"Patient Ajouté avec success", duration:3000});
       this.registerForm.reset();
       this.router.navigate(['receptionBord'])
   

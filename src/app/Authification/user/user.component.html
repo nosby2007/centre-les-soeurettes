@@ -1,0 +1,78 @@
+<div
+  class="container-fluid"
+  style="
+    background-image: url(./assets/nurse/join.jpg);
+    background-size:cover;
+    height: 800px;
+    margin-top: 0;
+    background-position: center;
+  ">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <h1 class="text-dark text-muted">Se Connecter</h1>
+            </div>
+            <div class="mb-3">
+              <label for="exempleInputEmail" class="form-label"
+                >Votre Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                [(ngModel)]="email"
+              />
+            </div>
+            <div clas1s="mb-3">
+              <label for="exempleInputPassword" class="form-label"
+                >Mot de pass</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                [(ngModel)]="password"
+              />
+            </div>
+            <button type="button" class="btn btn-success" (click)="login()">
+              Connexion
+            </button>
+            <div class="row">
+              <div class="col-md-6">
+                <a
+                  style="
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 22px;
+                    margin-top: 15px;
+                  "
+                  routerLink="/register"
+                  ><span class="text-danger f-4">S'enregister </span></a
+                >
+              </div>
+              <div class="col-md-6">
+                <a
+                  routerLink="/register"
+                  style="
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 22px;
+                    margin-top: 15px;
+                  "
+                  class="text-dark"
+                  >mot de passe oublié?</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>

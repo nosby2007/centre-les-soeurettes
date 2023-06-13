@@ -1,0 +1,43 @@
+input{
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+label {
+    font-size: 20px;
+  }
+
+.card {
+    border-radius: 10px;
+    background-color: rgba(144, 248, 248, 0.745);
+    box-shadow: 70px;
+    height: 350px;
+    width: 500px;
+    position:absolute;
+    margin-top: 10%;
+  
+  }
+  
+  .card .btn {
+    min-height: 30px;
+    max-width: max-content;
+    font-size: var(--fs-5);
+    font-weight: var(--fw-700);
+    align-items: center;
+    gap: 10px;
+    padding: 10px 30px;
+    border-radius: var(--radius-4);
+    transition: var(--transition-1);
+    margin-top: 10px;
+  }
+  
+  .btn-success {
+    background-color: var(--ultramarine-blue);
+    color: var(--white);
+  }
+  
+  .btn-success:is(:hover, :focus) {
+    background-color: var(--coral_10);
+    color: var(--white);
+  }
